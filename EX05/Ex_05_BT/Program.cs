@@ -17,6 +17,11 @@ namespace Ex_05_BT
            Console.WriteLine("Moi nhap chu: ");
            char n =char.Parse(Console.ReadLine());
            output_code(n);
+           Console.WriteLine("\nChu ban muon kiem tra la: ");
+           Check(n);
+           Console.WriteLine("\nChuyen doi chu :");
+           Change(n);
+            
            
         }
 
@@ -53,7 +58,29 @@ namespace Ex_05_BT
             Console.WriteLine((int)n);
         }
 
+        public static void Check(char n)
+        {
+            if(97<=n && n<=122)
+            {
+                Console.WriteLine("{0} Is lower", n);
+            }
+            else
+            {
+                Console.WriteLine("{0} Is Upper", n);
+            }
+        }
         
-        
+        public static void Change(char n)
+        {
+            
+            if(65<=n && n<=90)
+            {          
+                Console.WriteLine("{0} chuyen thanh {1}", n, (char)(n+32));
+            }
+            else
+            {            
+                Console.WriteLine("{0} chuyen thanh {1}", n, (char)(n-32));
+            }
+        } 
     }
 }
